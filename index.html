@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Sismi Project</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="assets/js/modernizr.js"></script>
+
+		<link href="assets/css/Style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="assets/js/scripts.js"></script>
+
+		<script type="text/javascript" src="assets/js/Chart.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js" integrity="sha512-+esjJ8NSEfoB5Sr8R7jTcYxCR1Bd6q9C+WQC0JA2UXVPT8Mlo/TJqqyp0qeeoxFzkAaa8t6tZCHLGmw3oNI2Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</head>
+
+	<body>
+		<nav>
+			<div class="navbox">
+				<img src="assets/img/Main-logo.svg" alt="main-logo">
+			</div>
+
+			<div class="navbox">
+				<div class="pickers p-active"></div>
+				<div class="pickers"></div>
+				<div class="pickers"></div>
+				<div class="pickers"></div>
+				<div class="pickers"></div>
+			</div>
+		</nav>
+
+		<section class="chart-box">
+			<div class="macchina">
+					<div id="gps_macchina"></div>
+					<img src="assets/img/icon-picker.svg" alt=""/>
+			</div>
+
+			<div class="finestra_grafico">
+				<div class="mondo">
+					<canvas class="assi-curvati" id="grafico"></canvas>
+					<div class="assi-curvati"></div>
+					<div class="assi-curvati"></div>
+					<div class="assi-curvati"></div>
+					<div class="assi-curvati"></div>
+					<div class="assi-curvati"></div>
+					<div class="assi-curvati"></div>
+					<div class="assi-curvati"></div>
+					<div class="assi-curvati"></div>
+					<div class="assi-curvati"></div>
+					<div class="assi-curvati"></div>
+					<div class="assi-curvati"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+					<div class="linee-verticali"></div>
+				</div>
+			</div>
+
+			<div class="controlli">
+				<div class="controlli-box">
+					<button type="button" name="button" onclick="searchbox()" class="controlli-buttons"><img src="assets/img/icon-search.svg" alt="Search Data"/></button>
+
+					<div class="controlli-box">
+						<div class="search-box" id="search-box">
+							<label for="ricercadata">Seleziona una data:</label>
+							<input type="date" name="ricercadata" >
+							<button type="button" onclick="storico();" class="search-buttons">Cerca</button>
+							<button type="button" onclick="live();" class="search-buttons">Live</button>
+						</div>
+					</div>
+
+					<button type="button" name="button" onclick="swapicon()" class="controlli-buttons" id="playaudio"><img src="assets/img/icon-play.svg" alt="Play Audio" id="play"/></button>
+				</div>
+			</div>
+		</section>
+
+		<section class="about-machine">
+			<label>About the machine</label>
+
+			<div class="grid">
+				<div class="grid-box">
+				  <img src="assets/img/img-arduino.svg" alt="">
+				</div>
+
+				<div class="grid-box">
+					<table>
+						<tr>
+							<th>Nome Macchina:</th>
+							<th class="data">Prototipo</th>
+						</tr>
+						<tr>
+							<th>Status: </th>
+							<th class="data">Online</th>
+						</tr>
+						<tr>
+							<th>Battery: </th>
+							<th class="data">100%</th>
+						</tr>
+						<tr>
+							<th>Latitudine: </th>
+							<th class="data"> 42.24</th>
+						</tr>
+						<tr>
+							<th>Longitudine: </th>
+							<th class="data"> 9.21</th>
+						</tr>
+						<tr>
+							<th>Data di Creazione: </th>
+							<th class="data"> 13:45 del 1 Marzo 2021</th>
+						</tr>
+						<tr>
+							<th>Posizione di Creazione: </th>
+							<th class="data"> Via Santa Marta 12, Milano, Italia</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<section class="about-project">
+			<label>About the Project</label>
+
+			<div class="grid">
+				<div class="grid-box">
+				  <img src="assets/img/img-logo.svg" alt="">
+				</div>
+
+				<div class="grid-box">
+					<p>Il progetto sismi si pone come principale obbiettivo quello di espandere le capacità sensoriali del essere umano,
+					andando ad allargarne il raggio mediante l'utilizzo di una biomacchina. Con Sismi si desidera trasformare il movimento
+					del terreno andando a percepire ogni minima vibrazione e trasformando i dati ricavati in elementi visivi e auditivi.
+				  Potete trovare lo sviluppo del progetto alla seguente <a href="https://github.com/Hyperink-machines/Sismi.Pizza" target="_blank">Repositoy Github</a>.</p>
+				</div>
+			</div>
+		</section>
+
+		<footer id="footer">
+			<p>Copyright @Hyperink 2021</p>
+		</footer>
+	</body>
+
+	<!-- Personal Scripts Graphic/Audio -->
+	<script type="text/javascript" src="assets/js/Scripts-chart.js"></script>
+	<script type="text/javascript" src="assets/js/Scripts-audio.js"></script>
+
+</html>

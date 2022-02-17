@@ -1,0 +1,772 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pixelade';
+    src: url('Pixelade.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+	--color-background: rgba(0,0,0,0.25)
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+/* ----- Desktop Style ----- */
+* {
+	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Pixelade';
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ----- Navbar ----- */
+
+nav {
+	width: 100%;
+  height: 80px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	padding: 0px 5%;
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+	z-index: 1;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+  .navbox:nth-child(1) img {
+  	background-color: transparent;
+  	height: 35px;
+  }
+
+  .navbox:nth-child(2) {
+    width: 150px;
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  }
+
+    .navbox:nth-child(2) .pickers {
+    	width: 24px;
+    	height: 24px;
+    	border-radius: 50%;
+    	background-color: rgba(0,0,0,0.14);
+    	cursor: pointer;
+    }
+
+    .navbox:nth-child(2) .pickers:hover {
+    	background-color: rgba(0,0,0,1);
+    }
+
+    .navbox:nth-child(2) .p-active {
+    	background-color: rgba(0,0,0,0.5);
+    }
+
+/* ----- Contenitor ----- */
+
+.chart-box {
+	width: 100%;
+	height: 50vh;
+	position: relative;
+	margin-top: 50vh;
+}
+
+.macchina {
+  width: 100%;
+	position: absolute;
+	top: -70px;
+  text-align: center;
+}
+
+#gps_macchina{
+	font-size: 16pt;
+	color: rgba(0,0,0,1);
+	text-align: center;
+}
+
+.macchina img {
+  height: 48px;
+}
+
+.finestra_grafico {
+	width: 100%;
+  height: 50vh;
+	position: absolute;
+	top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.mondo {
+  width: 300vw;
+  height: 75vh;
+  border-top-right-radius: 200vw 50vw;
+  border-top-left-radius: 200vw 50vw;
+	position: relative;
+	overflow: hidden;
+	left: -100vw;
+}
+
+.assi-curvati {
+  width: 300vw;
+	height: 75vh;
+  border-top-right-radius: 200vw 50vw;
+	border-top-left-radius: 200vw 50vw;
+	border-top: 1px solid rgba(0,0,0,0.3);
+  position: absolute;
+}
+
+.assi-curvati:nth-child(1) {top: 0px;}
+
+.assi-curvati:nth-child(2) {top: 5px;}
+
+.assi-curvati:nth-child(3) {top: 10px;}
+
+.assi-curvati:nth-child(4) {top: 15px;}
+
+.assi-curvati:nth-child(5) {top: 22px;}
+
+.assi-curvati:nth-child(6) {top: 33px;}
+
+.assi-curvati:nth-child(7) {top: 49px;}
+
+.assi-curvati:nth-child(8) {top: 73px;}
+
+.assi-curvati:nth-child(9) {top: 109px;}
+
+.assi-curvati:nth-child(10) {top: 163px;}
+
+.assi-curvati:nth-child(11) {top: 244px;}
+
+.assi-curvati:nth-child(12) {top: 366px;}
+
+.linee-verticali {
+  width: 0px;
+	height: 100%;
+	border-left: 1px solid rgba(0,0,0,0.3);
+  position: absolute;
+  top: 0;
+}
+
+.linee-verticali:nth-child(14) {
+  left: 105vw;
+  transform: rotate(-1.8deg);
+  -webkit-transform: rotate(-1.8deg);
+  -moz-transform: rotate(-1.8deg);
+  -ms-transform: rotate(-1.8deg);
+  -o-transform: rotate(-1.8deg);
+}
+
+.linee-verticali:nth-child(15) {
+  left: 110vw;
+  transform: rotate(-1.6deg);
+  -webkit-transform: rotate(-1.6deg);
+  -moz-transform: rotate(-1.6deg);
+  -ms-transform: rotate(-1.6deg);
+  -o-transform: rotate(-1.6deg);
+}
+
+.linee-verticali:nth-child(16) {
+  left: 115vw;
+  transform: rotate(-1.4deg);
+  -webkit-transform: rotate(-1.4deg);
+  -moz-transform: rotate(-1.4deg);
+  -ms-transform: rotate(-1.4deg);
+  -o-transform: rotate(-1.4deg);
+}
+
+.linee-verticali:nth-child(17) {
+  left: 120vw;
+  transform: rotate(-1.2deg);
+  -webkit-transform: rotate(-1.2deg);
+  -moz-transform: rotate(-1.2deg);
+  -ms-transform: rotate(-1.2deg);
+  -o-transform: rotate(-1.2deg);
+}
+
+.linee-verticali:nth-child(18) {
+  left: 125vw;
+  transform: rotate(-1deg);
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+}
+
+.linee-verticali:nth-child(19) {
+  left: 130vw;
+  transform: rotate(-0.8deg);
+  -webkit-transform: rotate(-0.8deg);
+  -moz-transform: rotate(-0.8deg);
+  -ms-transform: rotate(-0.8deg);
+  -o-transform: rotate(-0.8deg);
+}
+
+.linee-verticali:nth-child(20) {
+  left: 135vw;
+  transform: rotate(-0.6deg);
+  -webkit-transform: rotate(-0.6deg);
+  -moz-transform: rotate(-0.6deg);
+  -ms-transform: rotate(-0.6deg);
+  -o-transform: rotate(-0.6deg);
+}
+
+.linee-verticali:nth-child(21) {
+  left: 140vw;
+  transform: rotate(-0.4deg);
+  -webkit-transform: rotate(-0.4deg);
+  -moz-transform: rotate(-0.4deg);
+  -ms-transform: rotate(-0.4deg);
+  -o-transform: rotate(-0.4deg);
+}
+
+.linee-verticali:nth-child(22) {
+  left: 145vw;
+  transform: rotate(-0.2deg);
+  -webkit-transform: rotate(-0.2deg);
+  -moz-transform: rotate(-0.2deg);
+  -ms-transform: rotate(-0.2deg);
+  -o-transform: rotate(-0.2deg);
+}
+
+.linee-verticali:nth-child(23) {left: 150vw;}
+
+.linee-verticali:nth-child(24) {
+  left: 155vw;
+  transform: rotate(0.2deg);
+  -webkit-transform: rotate(0.2deg);
+  -moz-transform: rotate(0.2deg);
+  -ms-transform: rotate(0.2deg);
+  -o-transform: rotate(0.2deg);
+}
+
+.linee-verticali:nth-child(25) {
+  left: 160vw;
+  transform: rotate(0.4deg);
+  -webkit-transform: rotate(0.4deg);
+  -moz-transform: rotate(0.4deg);
+  -ms-transform: rotate(0.4deg);
+  -o-transform: rotate(0.4deg);
+}
+
+.linee-verticali:nth-child(26) {
+  left: 165vw;
+  transform: rotate(0.6deg);
+  -webkit-transform: rotate(0.6deg);
+  -moz-transform: rotate(0.6deg);
+  -ms-transform: rotate(0.6deg);
+  -o-transform: rotate(0.6deg);
+}
+
+.linee-verticali:nth-child(27) {
+  left: 170vw;
+  transform: rotate(0.8deg);
+  -webkit-transform: rotate(0.8deg);
+  -moz-transform: rotate(0.8deg);
+  -ms-transform: rotate(0.8deg);
+  -o-transform: rotate(0.8deg);
+}
+
+.linee-verticali:nth-child(28) {
+  left: 175vw;
+  transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+}
+
+.linee-verticali:nth-child(29) {
+  left: 180vw;
+  transform: rotate(1.2deg);
+  -webkit-transform: rotate(1.2deg);
+  -moz-transform: rotate(1.2deg);
+  -ms-transform: rotate(1.2deg);
+  -o-transform: rotate(1.2deg);
+}
+
+.linee-verticali:nth-child(30) {
+  left: 185vw;
+  transform: rotate(1.4deg);
+  -webkit-transform: rotate(1.4deg);
+  -moz-transform: rotate(1.4deg);
+  -ms-transform: rotate(1.4deg);
+  -o-transform: rotate(1.4deg);
+}
+
+.linee-verticali:nth-child(31) {
+  left: 190vw;
+  transform: rotate(1.6deg);
+  -webkit-transform: rotate(1.6deg);
+  -moz-transform: rotate(1.6deg);
+  -ms-transform: rotate(1.6deg);
+  -o-transform: rotate(1.6deg);
+}
+
+.linee-verticali:nth-child(32) {
+  left: 195vw;
+  transform: rotate(1.8deg);
+  -webkit-transform: rotate(1.8deg);
+  -moz-transform: rotate(1.8deg);
+  -ms-transform: rotate(1.8deg);
+  -o-transform: rotate(1.8deg);
+}
+
+/* ----- Controlli ----- */
+
+.controlli{
+	width: 100%;
+	position: absolute;
+	top: 33vh;
+	padding: 0px 5%;
+}
+
+.controlli-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 8% 84% 8%;
+  grid-template-rows: 100%;
+  font-size: 1.2rem;
+}
+
+.controlli-buttons {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  opacity: 0.5;
+}
+
+.controlli-buttons:hover {
+  opacity: 1;
+}
+
+.controlli-buttons img {
+  height: 48px;
+}
+
+.search-box {
+	width: 300px;
+  border: 1px solid rgba(0,0,0,1);
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-in;
+}
+
+.search-box input {
+  width: 100%;
+	font-size: 14pt;
+  background-color: white;
+	border: 1px solid rgba(0,0,0,0.5);
+  padding: 0 10px;
+	border-radius: 3px;
+	color: black;
+}
+
+.search-buttons {
+	width: 48%;
+	height: 30px;
+	background-color: white;
+	margin-top: 5px;
+	border: 1px solid rgba(0,0,0,0.50);
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.search-buttons:hover {
+	background-color: black;
+	color: white;
+}
+
+.search-buttons:nth-child(3) {
+  float: right;
+}
+
+/* ----- About Machine----- */
+
+.about-machine {
+  width: 100%;
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.about-machine label {
+	font-size: 60px;
+	margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.grid-box:nth-child(1) img {
+  width: 350px;
+}
+
+.grid-box:nth-child(2){
+  display: flex;
+  align-items: center;
+}
+
+.grid-box img {
+	width: 100%;
+  height: 100%;
+	object-fit: cover;
+}
+
+.grid-box table {
+  height: 80%;
+  font-size: 1.3rem;
+  text-align: left;
+  color: black;
+}
+
+.data {
+  padding: 0 10px;
+  color: rgba(0,0,0,0.8);
+}
+
+/* ----- About Project ----- */
+
+.about-project {
+  width: 100%;
+  padding: 0 10%;
+  text-align: center;
+}
+
+.about-project label {
+	font-size: 60px;
+	margin-bottom: 30px;
+}
+
+.grid-box p {
+  font-size: 1.3rem;
+  text-align: left;
+  color: black;
+}
+
+/* ----- Footer ----- */
+
+#footer {
+	width: 100%;
+  margin-top: 150px;
+  padding: 25px 0;
+	background-color: rgba(0,0,0,0.14);
+	font-size: 14pt;
+  text-align: center;
+}
+
+@media screen and (max-width:960px){
+
+  .about-machine {
+    padding: 0 8%;
+  }
+
+  .about-project {
+    padding: 0 8%;
+  }
+
+}
+
+@media screen and (max-width:768px){
+
+  .navbox:nth-child(1) img {
+  	height: 25px;
+  }
+
+    .navbox:nth-child(2) {
+      width: 130px;
+    }
+
+      .navbox:nth-child(2) .pickers {
+      	width: 20px;
+      	height: 20px;
+      }
+
+  /* ----- Contenitor ----- */
+
+  .linee-verticali:nth-child(14) {
+    display: none;
+  }
+
+  .linee-verticali:nth-child(15) {
+    display: none;
+  }
+
+  .linee-verticali:nth-child(16) {
+    left: 106.25vw;
+  }
+
+  .linee-verticali:nth-child(17) {
+    left: 112.5vw;
+  }
+
+  .linee-verticali:nth-child(18) {
+    left: 118.75vw;
+  }
+
+  .linee-verticali:nth-child(19) {
+    left: 125vw;
+  }
+
+  .linee-verticali:nth-child(20) {
+    left: 131.25vw;
+  }
+
+  .linee-verticali:nth-child(21) {
+    left: 137.5vw;
+  }
+
+  .linee-verticali:nth-child(22) {
+    left: 143.75vw;
+  }
+
+  .linee-verticali:nth-child(23) {left: 150vw;}
+
+  .linee-verticali:nth-child(24) {
+    left: 156.25vw;
+  }
+
+  .linee-verticali:nth-child(25) {
+    left: 162.5vw;
+  }
+
+  .linee-verticali:nth-child(26) {
+    left: 168.75vw;
+  }
+
+  .linee-verticali:nth-child(27) {
+    left: 175vw;
+  }
+
+  .linee-verticali:nth-child(28) {
+    left: 181.25vw;
+  }
+
+  .linee-verticali:nth-child(29) {
+    left: 187.5vw;
+  }
+
+  .linee-verticali:nth-child(30) {
+    left: 193.75vw;
+  }
+
+  .linee-verticali:nth-child(31) {
+    display: none;
+  }
+
+  .linee-verticali:nth-child(32) {
+    display: none;
+  }
+
+  /* ----- Controlli ----- */
+
+  .controlli{
+  	padding: 0px 10%;
+  }
+
+  .controlli-box {
+    grid-template-columns: 10% 80% 10%;
+  }
+
+  .controlli-box:nth-child(2){
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-box {
+  	width: 80%;
+  }
+
+  /* ----- About Machine ----- */
+
+  .about-machine {
+    padding: 50px 10%;
+  }
+
+  .about-machine label {
+  	font-size: 50px;
+    margin-bottom: 0px;
+  }
+
+  .grid {
+    grid-template-columns: 100%;
+  }
+
+  .grid-box:nth-child(1) img {
+    width: 300px;
+  }
+
+  .grid-box:nth-child(2){
+    justify-content: center;
+  }
+
+  .grid-box table {
+    height: 100%;
+    text-align: center;
+  }
+
+  /* ----- About Project ----- */
+
+  .about-project label {
+  	font-size: 50px;
+  	margin-bottom: 0px;
+  }
+
+  .grid-box p {
+    text-align: center;
+  }
+
+  /* ----- Footer ----- */
+
+  #footer {
+  	font-size: 13pt;
+  }
+}
+
+@media screen and (max-width:425px){
+
+  /* ----- Navbar ----- */
+
+  nav {
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+    .navbox:nth-child(1) img {
+      margin: 25px 0 10px;
+    }
+
+    .navbox:nth-child(2) {
+      width: 100%;
+    	display: flex;
+    	justify-content: space-around;
+    	align-items: center;
+      margin: 10px 0;
+    }
+
+    .navbox:nth-child(2) {
+      width: 100%;
+    }
+
+  /* ----- Contenitor ----- */
+
+  .linee-verticali:nth-child(16) {
+    display: none;
+  }
+
+  .linee-verticali:nth-child(17) {
+    display: none;
+  }
+
+  .linee-verticali:nth-child(18) {
+    left: 108.3vw;
+  }
+
+  .linee-verticali:nth-child(19) {
+    left: 116.6vw;
+  }
+
+  .linee-verticali:nth-child(20) {
+    left: 124.9vw;
+  }
+
+  .linee-verticali:nth-child(21) {
+    left: 133.2vw;
+  }
+
+  .linee-verticali:nth-child(22) {
+    left: 141.5vw;
+  }
+
+  .linee-verticali:nth-child(23) {left: 150vw;}
+
+  .linee-verticali:nth-child(24) {
+    left: 158.3vw;
+  }
+
+  .linee-verticali:nth-child(25) {
+    left: 166.6vw;
+  }
+
+  .linee-verticali:nth-child(26) {
+    left: 174.9vw;
+  }
+
+  .linee-verticali:nth-child(27) {
+    left: 183.2vw;
+  }
+
+  .linee-verticali:nth-child(28) {
+    left: 191.5vw;
+  }
+
+  .linee-verticali:nth-child(29) {
+    display: none;
+  }
+
+  .linee-verticali:nth-child(30) {
+    display: none;
+  }
+
+  /* ----- Controlli ----- */
+
+  .controlli{
+  	padding: 0px 8%;
+  }
+
+  .controlli-box {
+    grid-template-columns: 15% 70% 15%;
+  }
+
+  .controlli-box:nth-child(2){
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-box {
+  	width: 90%;
+  }
+
+  /* ----- About Machine ----- */
+
+  .about-machine {
+    padding: 50px 8% 80px;
+  }
+
+  .about-machine label {
+  	font-size: 40px;
+  }
+
+  .grid-box:nth-child(1) img {
+    width: 260px;
+  }
+
+  /* ----- About Project ----- */
+
+  .about-project label {
+  	font-size: 40px;
+  }
+
+  /* ----- Footer ----- */
+
+  #footer {
+  	font-size: 13pt;
+  }
+}
