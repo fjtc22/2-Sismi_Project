@@ -14,7 +14,7 @@ Il progetto prevede la realizzazione delle seguenti sezione :
 
 2 - Search Box : Sempre nella landing page si ha modo di poter selezionare una data specifica dalla quale rivedere i dati, dato che essi verrano ricavati continuamente dalla macchina, data la sua autonomia.
 
-Il progetto è ancora in fase di realizzazione, ma è possibile visitare una demo del progetto nel seguente link : https://fjtc22.github.io/
+Il progetto è ancora in fase di realizzazione, ma è possibile visitare una demo del progetto nel seguente link : _[https://sismi.francoticona.com/](https://sismi.francoticona.com/)_
 
 ## Team
 
